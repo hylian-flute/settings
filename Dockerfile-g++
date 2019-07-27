@@ -1,0 +1,6 @@
+FROM alpine:latest
+WORKDIR /usr/src/myapp
+RUN apk --no-cache add g++ && \
+  echo "#!/bin/ash" >> /g++.sh && \
+  echo "g++ -W \$1 && ./a.out" >> /g++.sh && \
+  chmod a+x /g++.sh
