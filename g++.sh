@@ -1,1 +1,1 @@
-docker run -it --rm -u $(id -u):$(id -g) -v `pwd`:/usr/src/myapp charines/gcc:alpine /g++.sh $1
+docker run -it --rm -u $SUDO_UID:$SUDO_GID -v `pwd`:/usr/src/myapp charines/gcc:alpine /g++.sh $1
