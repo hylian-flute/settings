@@ -1,0 +1,5 @@
+FROM paperist/alpine-texlive-ja
+WORKDIR /workdir
+RUN echo "#!/bin/ash" >> /platex.sh && \
+  echo "platex \$1.tex && dvipdfmx \$1.dvi" >> /platex.sh && \
+  chmod a+x /platex.sh
