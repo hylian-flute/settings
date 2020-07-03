@@ -1,0 +1,4 @@
+FROM node
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y && \
+  ~/.cargo/bin/cargo install wasm-pack
+ENV PATH $PATH:/root/.cargo/bin
